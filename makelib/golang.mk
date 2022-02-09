@@ -189,10 +189,14 @@ go.test.integration: $(GOJUNIT)
 	@$(OK) go test integration-tests
 
 go.lint: $(GOLANGCILINT)
+ifeq ($(nolint), 1)
+	echo "Skipping go.lint due to nolint=1 being set"
+else	
 	@$(INFO) golangci-lint
 	@mkdir -p $(GO_LINT_OUTPUT)
 	@$(GOLANGCILINT) run $(GO_LINT_ARGS) || $(FAIL)
 	@$(OK) golangci-lint
+endif
 
 go.vet:
 	@$(INFO) go vet $(PLATFORM)
