@@ -1,5 +1,14 @@
 # Build
 
+# :warning: Repository not maintained :warning:
+
+Please note that this repository is currently archived, and is no longer being maintained.
+
+- It may contain code, or reference dependencies, with known vulnerabilities
+- It may contain out-dated advice, how-to's or other forms of documentation
+
+The contents might still serve as a source of inspiration, but please review any contents before reusing elsewhere.
+
 This project contains common build scripts that are used by a number of open source projects at Upbound. We standardize on a makefile interface to all projects with simple verbs. We attempt to put more logic in makefiles and closer to the project and less on side of CI. This enables the builds to run on multiple environments including laptops and different CI/CD systems. Most build and test operations are designed to run in a container that contains all the tools necessary.
 
 Some features include:
